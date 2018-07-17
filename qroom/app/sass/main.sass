@@ -40,9 +40,18 @@ html, body
 body
 	font-size: 16px
 	position: relative
-	line-height: 1.65
+	line-height: 1.5
 	font-family: $default-font
 	overflow-x: hidden
+	background-color: $main-color
+	color: #fff
+	margin: 0
+a
+	color: #fff
+	text-decoration: none
+
+p 
+	margin: 0 0 10px
 
 .img-responsive
 	display: block
@@ -55,7 +64,240 @@ body
 ::selection
 	background-color: $accent
 	color: #fff
+// Верхнее описание квестов
+.top-quest-info-wrapper
+	padding: 0
+	padding-bottom: 70px
+	margin: 0
+.top-quest-info-inner
+	position: relative
+	min-height: 550px
+	z-index: 1
+	padding: 50px 0
+.top-quest-info
+	padding-right: 35%
+	bottom: 0
+	left: 0
+	right: 0
+	padding-top: 80px
+	min-height: 400px
+.top-quest-info-type
+	font-size: 1.5em
+	line-height: 24px
+.top-quest-info-name
+	font-weight: 400
+	line-height: normal
+	font-size: 3em
+.top-quest-info-features
+	padding: 10px
+	background: rgba(0, 0, 0, 0.25);
+	border-radius: 3px;
+	overflow: hidden;
+	margin-bottom: 25px;
+	p:last-child 
+		border: none
+.slider-quest-info-feature
+	float: left
+	width: 20%
+	border: none
+	border-right: 1px solid rgba(255, 255, 255, 0.25)
+	text-align: center
+	font-size: 1.25em
+	font-weight: 600
+	padding-left: 20px
+	padding: 10px
+	margin: 0
+	span
+		display: block
+		font-size: 12px
+.top-quest-info-address
+	position: absolute
+	z-index: 9
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(0, 0, 0, 0.55)
+	font-size: 1.5em
+	border-radius: 0
+	margin: 0
+	max-width: none
+	padding: 10px 0
+	text-shadow: 1px 1px #000
+.top-quest-info-metro
+	float: left
+.top-quest-info-address-place
+	float: right
+.top-quest-info-metro, .top-quest-info-address-place
+	margin: 0
+	padding: 5px 0
+	line-height: 1.5
+.theme-dark
+	background: #020308 url(/img/bg_02.jpg) no-repeat
+	background-size: auto auto
+	background-size: 100%
+	padding-bottom: 40px
+	padding-top: 40px
+.section-annotation
+	font-size: 1.20em
+	line-height: normal
+// Видео
+.thumb-wrap
+	position: relative
+	padding-bottom: 41% //56.25%  для маленьких
+	max-height: 550px
+	//padding-top: 30px
+	height: 0
+	overflow: hidden
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		//max-height: 550px
+/*.container
+	margin: 0 auto
+	position: relative
+	width: 100%
+	-webkit-transform: translateZ(0)*/
 
+// Заголовки
+.main_title
+	h2
+		font-size: 30px
+		font-weight: 400
+		letter-spacing: 1px
+		margin-bottom: 40px
+		padding-bottom: 20px
+		position: relative
+		line-height: 40px
+		font-family: "roboto-cond", sans-serif
+		&:hover
+			.line:before
+				width: 75%
+	.line
+		width: 33%
+		background: rgba(255, 255, 255, .07)
+		bottom: 0
+		height: 1px
+		position: absolute
+		&:before
+			background: #1cc6df
+			content: ""
+			display: block
+			height: 1px
+			position: absolute
+			width: 100px
+			-moz-transition: all 0.2s linear
+			-o-transition: all 0.2s linear
+			-webkit-transition: all 0.2s linear
+		span
+			color: rgb(16, 16, 18)
+			font-size: 20px
+			position: absolute
+			text-align: center
+			top: -20px
+			.fa-inverse
+				color: #1cc6df
+
+.line, .line::before, .line span
+	left: 50%
+	-webkit-transform: translateX(-50%)
+	-moz-transform: translateX(-50%)
+	-ms-transform: translateX(-50%)
+	-o-transform: translateX(-50%)
+	transform: translateX(-50%)
+
+// Бронирование
+ul, li
+	list-style: none
+.booking-table
+	.table-row
+		position: relative
+		padding-left: 220px
+		line-height: 22px
+		.date
+			position: absolute
+			top: 0
+			left: 0
+			width: 215px
+			text-align: left
+			line-height: 21px
+			height: 32px
+			background: rgba(255, 255, 255, 0.1)
+			padding: 5px 10px
+			border-radius: 3px
+			margin: 0 0 5px
+			.day
+				display: inline-block
+				min-width: 80px
+				text-align: left
+				font-size: 12px
+			.day-name 
+				display: inline-block
+				font-weight: 600
+				color: #fff
+				letter-spacing: 1px
+				font-size: 12px
+	.times 
+		margin: 0 15px -2px 0
+		padding: 0 0
+		opacity: 0.75
+		transition: opacity .3s ease
+		.time
+			padding: 0 0
+			margin: 0 0
+			width: 8.3333%
+			display: inline-block
+			position: relative
+			a
+				text-decoration: none
+			.tip
+				position: absolute
+				background: #000
+				top: 100%
+				width: 100px
+				z-index: 9
+				opacity: 0
+				visibility: hidden
+				text-align: center
+				font-size: 10px
+				border-radius: 3px
+				left: 50%
+				margin-left: -50px
+				transition: all .3s ease
+				transform: translateY(5px)
+				&:before
+					content: ''
+					position: absolute
+					border: 3px solid transparent
+					border-bottom-color: transparent
+					left: 50%
+					top: -6px
+					border-bottom-color: #000
+					margin-left: -3px
+// Цены
+.price
+	background: #039be5
+	display: inline-block
+	margin: 0 5px 0 0
+	font-size: 12px
+	line-height: 22px
+	padding: 3px 12px
+	border-radius: 3px
+	text-align: center
+	color: #fff
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.35)
+	box-shadow: inset 1px 1px rgba(255, 255, 255, 0.15), inset -1px -1px rgba(0, 0, 0, 0.15)
+.price-2
+	background: #8ec051
+.price-3
+	background: #f0ad4e	
+.centered
+    text-align: center
+.upper 
+	text-transform: uppercase
+// Бронирование
 .time_button
 	background-color: #3eafdb
 	color: #fff
@@ -69,12 +311,91 @@ body
 	cursor: pointer
 	display: inline-block
 .time_date
-	text-align: center;
-	color: #b7c1d3;
-	white-space: nowrap;
-	height: 100%;
-	padding: 2px 2px;
-	background: #202327;
+	text-align: center
+	color: #b7c1d3
+	white-space: nowrap
+	height: 100%
+	padding: 2px 2px
+	background: #202327
 	margin-bottom: 5px
+
+// Блок с преимуществами
+.item-left-icon
+	margin-bottom: 40px
+	position: relative
+	padding-left: 40px
+	i
+		line-height: 24px
+		position: absolute
+		top: 0
+		left: 2px
+		font-size: 20px
+		text-align: center
+		width: 30px
+		color: #cb2821
+
+// Отзывы
+.quote
+	cursor: pointer
+	padding: 0 15px 60px 15px 
+	width: 100%
+	&:hover
+		.quote_text
+			text-decoration: underline
+		.quote_heder
+			i
+				color: #ffee10
+		.avatar
+			&:after
+				-webkit-transform: scale(1.1)
+				-moz-transform: scale(1.1)
+				-ms-transform: scale(1.1)
+				-o-transform: scale(1.1)
+				box-shadow: 0 0 15px #ffee10
+	.avatar
+		float: left
+		margin: 0 20px 5px 0 
+		width: 120px
+		height: 120px
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			background: #ffee10
+			transition: .5s
+			-webkit-transform: scale(0.9)
+			-moz-transform: scale(0.9)
+			-ms-transform: scale(0.9)
+			-o-transform: scale(0.9)
+			z-index: 1
+		img
+			position: relative
+			border-radius: 50%
+			width: 100%
+			height: 100%
+			z-index: 2
+	.quote_heder
+		margin-top: 10px
+		margin-bottom: 25px
+		.quote_name
+			font-size: 20px
+			color: #fbec84
+		i
+			font-size: 25px
+			margin-left: 7px
+			color: #464c57
+		.date
+			font-size: 14px
+			line-height: 20px
+			color: #464c57
+			text-transform: uppercase
+
+#map
+	color: #333
 
 @import "media" // Всегда в конце
